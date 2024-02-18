@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXs </title>
+    <link rel="icon" href="letter-l-icon-7.png" type="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+
+
+        }
+
+        .carousel-item {
+            min-height: 280px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar">
+        <div class="logo">
+           {% comment %} <img src="letter-l-icon-7.png" alt="Logo" width="80" height="40"> {% endcomment %}
+            <img src="{% static 'letter-l-icon-7.png'%}" alt="Logo" width="80" height="40">
+
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %} ">Home</a></li>
+            <li><a href="{% url 'model' %} ">Car Detail</a></li>
+            <li><a href="{% url 'contact' %} ">Location</a></li>
+            <li><a href="{% url 'about' %} ">Services</a></li>
+        </ul>
+    </nav>
+
+    <div class="name">
+        <h1 style="margin: 40px;"> LUXS CUSTOMS</h1>
+    </div>
+
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h1>
+                            Welcome
+                        </h1>
+                        <p>
+                            ...to Lux's Customs - Your Premier Destination for Exquisite Automobiles! <br>
+                            At Lux's Customs, we redefine the car buying experience by offering an unparalleled
+                            selection of top-tier vehicles tailored to your desires. Step into a world where luxury
+                            meets customization, where your dream car becomes a reality with just a few clicks.
+
+                            Discover a vast array of meticulously curated automobiles, from sleek sports cars to
+                            sophisticated sedans, rugged SUVs to high-performance exotics - we have it all. What sets
+                            Lux's Customs apart is our commitment to providing not just cars, but an exclusive journey
+                            to find the vehicle that perfectly suits your lifestyle and preferences.
+
+                        </p>
+                        <a  href="{% url 'model' %} " class="but-1 btn-warning"> ORDER NOW</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    {% comment %} <img src="back1.jpeg" width="100%"> {% endcomment %}
+                    <img src="{% static 'back1.jpeg'%}" width="100%">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="background-video">
+        <video autoplay muted loop id="video-bg">
+            <source src="{% static 'bug.mp4'%}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Your other content goes here -->
+
+    </div>
+    <h1 id="h2" style="color: goldenrod;">
+        Here at LUX's Customs
+    </h1>
+
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                {% comment %} <img src="" class="d-block w-100" alt="Slide 1"> {% endcomment %}
+                <img src="{% static 'bugatti 1.jpg'%}" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                {% comment %} <img src="jesko.jpg" class="d-block w-100" alt="Slide 2"> {% endcomment %}
+                <img src="{% static 'jesko.jpg'%}" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 /h4>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                {% comment %} <img src="sian.jpg" class="d-block w-100" alt="Slide 3"> {% endcomment %}
+                <img src="{% static 'sian.jpg'%}" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4></h4>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a style="color: rgb(0, 0, 0);" class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"> PREV</span>
+        </a>
+        <a style="color: black;" class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"> NEXT</span>
+        </a>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        <br>
+                        Contact Us <br>
+                        For any inquiries or assistance, please feel free to get in touch: <br>
+                        <br>
+                        Email: Lux@gmail.com <br>
+                        Phone: +1234567890 <br>
+                        Location: 123 Street , Rome, ITALY
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <br>
+                        Connect with Us <br>
+                        Follow us on social media for updates and news: <br>
+                        <br>
+                        <span class="social-icons">
+                            <!-- Replace # with your social media URLs -->
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://telegram.org/"><i class="fab fa-telegram"></i></a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
