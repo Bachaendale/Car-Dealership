@@ -1,8 +1,17 @@
 from django.shortcuts import render, HttpResponse
 from .models import*
+
 # Create your views here.
 def index(request):
- return render(request,'index.html')
+   heads  = paragraph.objects.all().first
+   text = paragraph.objects.all().first
+   img =paragraph.objects.all().first
+   data = {
+      'heads': heads,
+      'text': text,
+      'img': img
+   }
+   return render(request,'index.html', data)
    
    
 def model(request):
@@ -12,7 +21,6 @@ def model(request):
    data = {
       'info': info,
       'products': products
-      
    }
    
    
@@ -24,4 +32,29 @@ def contact(request):
       return render(request , 'contact.html')
 
 def about(request):
-      return render(request , 'about.html')
+   heads = aboutt.objects.all().first
+   para = aboutt.objects.all().first
+   img = aboutt.objects.all().first
+   data = {
+      'heads' : heads,
+      'para' : para,
+      'img': img
+   } 
+   
+   
+   return render(request , 'about.html', data)
+
+   
+   
+def form(request):
+   
+   if request.method =='POST':
+       
+      name  = request.POST.get('name')
+      email  = request.POST.get('email')
+      comment  = request.POST.get('comment')
+      new_contact = Contact( name = name ,email=email, comment=comment)
+      new_contact.save()
+      return HttpResponse("<h1> THANKS FOR CONTACT US</h1>")
+   return render(request, 'form.html')
+   

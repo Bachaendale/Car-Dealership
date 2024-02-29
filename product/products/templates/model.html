@@ -50,7 +50,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title"> {{single_product.product_name}}</h5>
                         <p class="card-text">{{single_product.product_description}}</p>
-                        <a href="form.html" class="btn btn-warning">Price - {{single_product.price}} </a>
+                        
+                        <a href="{% url 'form' %}" class="btn btn-warning">Price - {{single_product.price}} <br> ORDER NOW </a>
                     </div>
                 </div>
  

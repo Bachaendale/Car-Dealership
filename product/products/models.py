@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
 #company info
 #product
 
@@ -26,6 +25,32 @@ class Product(models.Model):
     date = models.DateField(auto_now_add=True)
     def __str__(self)->str:
      return self.product_name
+ 
+ 
+class paragraph (models.Model):
+        header = models.CharField(max_length = 100 )
+        text = models.TextField()
+        pics = models.ImageField(null= True)
+        
+        def __str__(self)->str:
+           return self.header
+       
+class aboutt (models.Model):
+    para = models.TextField()
+    image= models.ImageField(null = True)  
+    h5 = models.CharField(max_length = 100)
+    def __str__(self)->str:
+           return self.h5
+       
+class Contact(models.Model):
+   name  = models.CharField(max_length=100)
+   email  = models.EmailField()
+   comment  = models.TextField()
+
+   def __str__(self) -> str:
+      return self.name       
+    
+        
      
      
 

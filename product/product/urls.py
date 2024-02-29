@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from products.views import index, model, contact, about 
+from products.views import index, model, contact, about , form
 from  django.conf import settings
 from django.conf.urls.static import static
 
@@ -10,7 +10,8 @@ urlpatterns = [
     path('',index, name = 'index'),
     path('model/',model,  name = 'model'),
     path('contact/', contact, name =  'contact'),
-    path('about/', about, name = 'about')
+    path('about/', about, name = 'about'),
+    path('form/', form, name = 'form')
 
     
     

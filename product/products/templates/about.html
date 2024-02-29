@@ -38,25 +38,12 @@
                 <div class="row g-0">
                     <div class="col-sm-5">
                         {% comment %} <img src="BACKBUG2.jpg" class="card-img-top h-100" alt="..."> {% endcomment %}
-                        <img src="{% static 'BACKBUG2.jpg'%}" class="card-img-top h-100" alt="...">
+                        <img src="{{img.image.url}}" class="card-img-top h-100" alt="...">
                     </div>
                     <div class="col-sm-7">
                         <div class="card-body">
-                            <h5 class="card-title">Here at Lux's Customs</h5>
-                            <p class="card-text"></p> that's just the beginning! Lux's Customs specializes in
-                            customization,
-                            offering a unique opportunity to tailor your chosen vehicle to your exact
-                            specifications. From custom paint jobs and interior upholstery to performance
-                            enhancements and technological upgrades, our skilled technicians and designers are ready
-                            to transform your car into an exquisite masterpiece that reflects your individuality.
-                            Lux's Customs isn't just about selling cars; it's about delivering an elevated
-                            experience. Our commitment to excellence extends beyond the purchase - we offer
-                            comprehensive after-sales support, servicing, and maintenance to ensure your prized
-                            possession stays in peak condition for years to come. Embrace luxury, precision, and
-                            customization at Lux's Customs. Your journey to owning the perfect car begins here.
-                            Experience automotive excellence like never before. Join us and elevate your driving
-                            experience to the pinnacle of luxury at Lux's Customs - Where Every Car is a
-                            Masterpiece! </p>
+                            <h5 class="card-title">{{heads.h5}} </h5>
+                            <p class="card-text"></p> {{para.para}} </p>
                         </div>
                     </div>
                 </div>

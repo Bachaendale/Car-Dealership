@@ -56,27 +56,20 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="feature-box">
+                   
                         <h1>
-                            Welcome
+                           {{heads.header}}
                         </h1>
                         <p>
-                            ...to Lux's Customs - Your Premier Destination for Exquisite Automobiles! <br>
-                            At Lux's Customs, we redefine the car buying experience by offering an unparalleled
-                            selection of top-tier vehicles tailored to your desires. Step into a world where luxury
-                            meets customization, where your dream car becomes a reality with just a few clicks.
-
-                            Discover a vast array of meticulously curated automobiles, from sleek sports cars to
-                            sophisticated sedans, rugged SUVs to high-performance exotics - we have it all. What sets
-                            Lux's Customs apart is our commitment to providing not just cars, but an exclusive journey
-                            to find the vehicle that perfectly suits your lifestyle and preferences.
-
+                            {{text.text}}
                         </p>
+                       
                         <a  href="{% url 'model' %} " class="but-1 btn-warning"> ORDER NOW</a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     {% comment %} <img src="back1.jpeg" width="100%"> {% endcomment %}
-                    <img src="{% static 'back1.jpeg'%}" width="100%">
+                    <img src="{{img.pics.url}}" width = "100%" >
                 </div>
             </div>
 
